@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言表单</title>
+</head>
+<body>
+<p style="font-size: 29px">请填写留言</p>
+<br>
+<div class=input_main ><label for="username" ><i>*</i>姓名：</label>
+    <input class=input_tgx type="text" id="username" name="username"   ></div>
+</br>
+<div> <label for="username" ><i>*</i>性别：</label>
+    <select name="sex"id="sex">
+        <c:choose>
+            <c:when test="${user.sex ==1 }">
+                <option value="1"selected="selected">男</option>
+            </c:when>
+            <c:otherwise>
+                <option value="0"selected="selected">女</option>
+            </c:otherwise>
+        </c:choose>
+    </select></div></br>
+<div class=input_main ><label for="dianhua" ><i>*</i>电话：</label>
+    <input class=input_tgx type="text" id="dianhua" name="dianhua"   ></div></br>
+<div class=input_main ><label for="youjian" ><i>*</i>电子邮件：</label>
+    <input class=input_tgx type="text" id="youjian" name="youjian"   ></div></br>
+<div class=input_main ><label for="liuyan" ><i>*</i>留言：</label>
+    </br>
+    <textarea id="liuyan" name="liuyan"></textarea></div>
+<input type="submit"  value="提交" >
+<input type="reset"  value="重置" >
+</form>
+
+</body>
+</html>

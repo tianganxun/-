@@ -1,0 +1,37 @@
+
+
+数据库文件夹中dazuoye.sql为数据库文件
+
+
+网站源代码文件夹中：
+
+file文件夹为用户上传图片的存储文件夹
+
+各种图片为前端所需图片
+
+
+html文件为前端 css直接写入html
+主页-zhuye.html     为默认文档 内容是网站首页 可链接到各个网页
+注册-register.html
+发布动态-fabu.html
+管理员-guanli.html
+
+php文件为各种后端
+图片上传-chuantu.php   
+主页左侧导航栏实现页面局部刷新-daohang.php   
+主页实现登录-denglu.php  
+管理员界面实现（后端未实现）-guanli.php 
+主页登陆时验证码生成-yanzhen.php
+注册实现-zhuce.php
+主页右上角在用户登录后显示用户名及注销-zhuxiao.php
+主页登录后点注销删除session-zhuxiao1.php
+
+html和php混写
+登录用户个人动态展示实现-geren.php 
+
+管理员界面
+界面选择+兑奖码发布-guanli.html 
+数据库管理-guanli.php
+数据删除-shanchu.php
+数据编辑输入界面-edit.php
+数据编辑处理-edit1.php

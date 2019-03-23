@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="zhuxiao()">
+<div id="x" class="nav_right" style= "display:inline ">
+
+    <a href="javascript:openLogin();">登录</a>| <a href="register.html">注册</a></div>
+
+
+
+
+    <div class=input_main ><label for="fayan" ><i>*</i>您的发言内容：</label>
+        <input class=input_tgx type="text" id="fayan" name="fayan"  placeholder="请输入聊天内容" ></div>
+
+
+
+
+
+    <br>
+   <button onclick="addElementDiv('parent')">发言</button>
+
+
+　<div id="parent">聊天室</div>
+</body>
+</html>
+<script language="javascript">
+    var xmlHttp;
+    var z=document.getElementById("z");
+    var g=document.getElementById("g");
+    var x=document.getElementById("x");
+    function createXMLHttpRequest(){
+        if(window.ActiveXObject)
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        else if(window.XMLHttpRequest)
+            xmlHttp = new XMLHttpRequest();
+    }
+    var myDate = new Date();
+    myDate.toLocaleString( );        //获取日期与时间
+
+
+    function zhuxiao(){
+        createXMLHttpRequest();
+        var zurl="zhuxiao.php";
+
+        xmlHttp.open("GET",zurl,true);
+
+        xmlHttp.onreadystatechange = function(){
+
+            if(xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                x.innerHTML=xmlHttp.responseText;
+
+        }
+
+        xmlHttp.send(null);
+    }
+    function addElementDiv(obj) {
+        var parent = document.getElementById(obj);
+        var m=document.getElementById("m").name;
+        var f=document.getElementById("fayan").value;
+        //添加 div
+        var div = document.createElement("div");
+
+        //设置 div 属性，如 id
+        div.setAttribute("id", "newDiv");
+        var s=myDate;
+
+        div.innerHTML = "发言人："+m+"</br>"+"发言时间："+s+"</br>"+"发言内容："+f+"</br>"+"</br>";
+        parent.appendChild(div);
+    }
+
+
+</script>

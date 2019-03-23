@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p style="font-size: 29px">简单验证</p>
+<form>
+    <div class=input_main ><label for="username" ><i>*</i>请输入应该1到100之间的数字：</label>
+        <input class=input_tgx type="text" id="username" name="username"   ></div>
+
+    <input type="submit"  value="提交" onclick="check()">
+
+</form>
+<script>
+    function check(){
+        var number=document.getElementById("username").value;
+
+        if(number==""){
+
+            window.alert("请输入应该1到100之间的数字");
+
+        }else {
+            if(/^(\+|-)?\d+($|\.\d+$)/.test(number)) {
+
+                var value=parseInt(number);
+                if(value>=1&&value<=100){
+
+                    window.alert("你输入对了，谢谢");
+                }else{
+
+                    window.alert("请输入应该1到100之间的数字");
+                }
+            }  else{
+
+                window.alert("请输入应该1到100之间的数字");
+            }
+        }}</script>
+</body>
+</html>

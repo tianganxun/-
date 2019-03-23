@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理界面</title>
+    <style>
+
+        body {
+            background:#bee1f5;
+        }
+        i {
+            color: red;
+            margin-right: 5px;
+        }
+        .p1{
+            margin: 30px 15px;
+            font-size: 16px;}
+        .a2{
+            font-size: 22px;
+            margin:10px 30px 10px 110px;
+
+            vertical-align:middle;
+        }
+        .main_radius_bg {
+            width: 900px;
+            height: 500px;
+            margin: 140px auto 15px;
+            background-color: #fff;
+            border-radius: 6px;
+            box-shadow: 1px 2px 3px #98b4c4;
+            -moz-box-shadow:1px 2px 3px #98b4c4;
+            -webkit-box-shadow: 1px 2px 3px #98b4c4;
+        }
+        .input_tgx {
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            height: 28px;
+            width: 220px;
+            vertical-align: middle;
+            color: #808080;
+            -webkit-box-shadow: 0px 1px 1px 0px #eaeaea inset;
+            -moz-box-shadow: 0px 1px 1px 0px #eaeaea inset;
+            box-shadow: inset 0px 1px 1px 0px #eaeaea;
+            height: 20px\9;
+            padding: 8px 0 0 2px\9;
+
+
+        }
+
+        input[type="submit"] {
+            -moz-user-select: none;
+
+
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 2px 2px 2px 2px;
+            color: #fff;
+            cursor: default;
+            font-family: arial,sans-serif;
+            font-size: 16px;
+
+            font-weight: bold;
+            height: 40px;
+            width: 224px;
+            background: #FFA00A;
+            margin: 1px 50px 100px 96px;
+            min-width: 54px;
+            padding: 0 8px;
+            text-align: center;
+        }
+
+        .input_main {
+            margin: 30px 15px;
+        }
+        input:focus {
+            border-color:#FFB941 !important;
+        }
+        .main_head1 {
+
+            height:11%;
+            width: 100%;
+
+            _display: inline;
+        }
+        .main_head2 {
+
+            height:5%;
+            width: 100%;
+
+            _display: inline;
+        }
+        .main_left {
+            float:left;
+
+            width: 400px;
+            margin: 30px 30px 0 90px;
+            _display: inline;
+
+
+        }
+        .main_right {
+            float:right;
+
+            width: 310px;
+            margin: 30px 30px 0 0;
+            font-size: 14px;
+            line-height: 22px;
+            _display: inline;
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div class=" main_radius_bg">
+
+    <div class=" main_head1">
+
+    </div>
+    <div class=" main_head2">
+        <p ><a class="a2">兑奖码发布</a> </p>
+    </div>
+    <div class=" main_left">
+        <form action="guanli.php" method="get" name="form_register">
+
+            <div class=input_main ><label for="username" ><i>*</i>兑奖码：</label>
+                <input class=input_tgx type="text" id="username" name="username"  placeholder="请输入兑奖码" ></div>
+
+            <div class=input_main > <label for="password" ><i>*</i>金币数：</label>
+                <input class=input_tgx id="password" name="password"  placeholder="请输入包含金币数"></div>
+
+            <div class=input_main> <label for="repassword" ><i>*</i>银币数：</label>
+                <input class=input_tgx id="repassword" name="repassword"  placeholder="请输入包含银币数" ></div>
+            <div> <input type="submit" value="立即发布"></div>
+
+        </form>
+    </div>
+    <div class=" main_right">
+        <p class="p1">查看已有兑奖码</a></p>
+        <p class="p1">查看已用兑奖码</a></p>
+        <p class="p1">管理数据库</a></p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <title>登录页面</title>
+    <style>
+
+        body {
+            background:#bee1f5;
+        }
+        i {
+            color: red;
+            margin-right: 5px;
+        }
+
+        .main_radius_bg {
+            width: 600px;
+            height: 400px;
+
+            background-color: #fff;
+            border-radius: 6px;
+            box-shadow: 1px 2px 3px #98b4c4;
+            -moz-box-shadow:1px 2px 3px #98b4c4;
+            -webkit-box-shadow: 1px 2px 3px #98b4c4;
+        }
+        .input_tgx {
+            border: 1px solid #ccc;
+            border-radius: 2px;
+            height: 28px;
+            width: 220px;
+            vertical-align: middle;
+            color: #808080;
+            -webkit-box-shadow: 0px 1px 1px 0px #eaeaea inset;
+            -moz-box-shadow: 0px 1px 1px 0px #eaeaea inset;
+            box-shadow: inset 0px 1px 1px 0px #eaeaea;
+            height: 20px\9;
+            padding: 8px 0 0 2px\9;
+
+
+        }
+
+        input[type="submit"] {
+            -moz-user-select: none;
+
+
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 2px 2px 2px 2px;
+            color: #fff;
+            cursor: default;
+            font-family: arial,sans-serif;
+            font-size: 16px;
+
+            font-weight: bold;
+            height: 40px;
+            width: 224px;
+            background: #FFA00A;
+            margin: 1px 100px 100px 112px;
+            min-width: 54px;
+            padding: 0 8px;
+            text-align: center;
+        }
+
+        .input_main {
+            margin: 30px 15px;
+        }
+
+        input:focus {
+            border-color:#FFB941 !important;
+        }
+        .main_head1 {
+
+            height:8%;
+            width: 100%;
+
+            _display: inline;
+        }
+
+
+        .main_left {
+            float:left;
+
+            width: 100%;
+
+            _display: inline;
+
+
+        }
+
+        .img_close{
+            position:absolute;
+            right:1px;
+            top:1px;
+        }
+
+        .img_yanzhen{
+            position:absolute;
+            left:470px;
+            top:204px;
+        }
+    </style>
+</head>
+<body>
+<div align=center style="height:70vh;">
+
+
+    <div id=win style="display:none; POSITION:absolute; left:50%; top:50%; width:600px; height:400px; margin-left:-300px; margin-top:-200px; text-align:center">
+        <div  class=" main_radius_bg">
+
+            <div class=" main_head1">
+
+            </div>
+
+            <img class="img_close" src="1.png" height="16" width="16" onclick="javascript:closeLogin();"/>
+
+
+            <br>
+            <div class=" main_left">
+                <form action="登录.php" method="get" name="form_register">
+
+                    <div class=input_main ><label for="username" ><i>*</i>您的昵称：</label>
+                        <input class=input_tgx type="text" id="username" name="username"  placeholder="请输入用户名" ></div>
+
+                    <div class=input_main > <label for="password" ><i>*</i>您的密码：</label>
+                        <input class=input_tgx id="password" name="password"  placeholder="请输入密码"></div>
+
+                    <div class=input_main > <label for="ckcode" ><i>*</i>输验证码：</label>
+                        <input class=input_tgx id="ckcode" name="ckcode"  placeholder="请输入验证码 点击可换"></div>
+                    <img src="yanzhen.php" class="img_yanzhen" height="32"  style="cursor:pointer" onclick="refreshcode(this,this.src)">
+
+                    <script language="javascript" type="text/javascript">
+                        function refreshcode(obj,url){
+                            obj.src=url+"?nowtime="+Math.random();
+
+
+                        }
+                    </script>
+
+                    <br>
+                    <div> <input type="submit" value="登录"></div>
+
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script>
+        function openLogin(){
+            document.getElementById("win").style.display="";
+        }
+        function closeLogin(){
+            document.getElementById("win").style.display="none";
+        }
+    </script>
+    <a href="javascript:openLogin();">打开登录框</a>
+</div>
+</body>
+</html>
